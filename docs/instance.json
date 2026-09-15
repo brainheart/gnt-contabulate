@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "gnt",
+  "emoji": "✝️",
+  "title": "Greek New Testament",
+  "tagline": "Greek New Testament Tabular Explorer",
+  "language": "Ancient Greek",
+  "created": "2026-09-15",
+  "url": "https://gnt.contabulate.org/",
+  "source": "https://github.com/brainheart/gnt-contabulate",
+  "sample_queries": [
+    {
+      "label": "The Word in John",
+      "url": "https://gnt.contabulate.org/?q=%CE%BB%CF%8C%CE%B3%CE%BF%CF%82&gran=line&s_ft_location=%5E04%5C.John%5C.&sk=location&sd=asc"
+    },
+    {
+      "label": "Augustine on John 1:1",
+      "url": "https://gnt.contabulate.org/?cm=John.1.1~augustine"
+    }
+  ],
+  "updated": "2026-09-15",
+  "stats": {
+    "texts": 27,
+    "text_label": "books",
+    "segments": 7939,
+    "segment_label": "verses",
+    "words": 137741,
+    "distinct_words": 18616,
+    "commentaries": 242,
+    "comments": 58620
+  }
+}

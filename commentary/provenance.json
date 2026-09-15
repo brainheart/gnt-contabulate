@@ -1,0 +1,39 @@
+{
+  "source": "https://github.com/HistoricalChristianFaith/Commentaries-Database",
+  "snapshot_from": "https://github.com/brainheart/kjv-contabulate/tree/6ad9077/docs/commentary",
+  "donor_commit": "6ad90776324aae036f498999fe47eca5cceedf1c",
+  "files": {
+    "Matt.json.gz": "0e0da4671949481b26aa6d0cd3b839b625eff4524bbc497f915a38bd47a886bb",
+    "Mark.json.gz": "7be4fda4d0fd832105ba2fb144bbd43fc66b3a49abe1371780095c2fda6073c9",
+    "Luke.json.gz": "ddf2816e27638ac052430926801af8767d1c4d76fb1c42bb7457a3e5c2897504",
+    "John.json.gz": "dc316b44c884a5c71d4ea372afe9716d316d647ca7b5e725dc152ba556d77142",
+    "Acts.json.gz": "2d2056e8712abaddc931036c3677256d036b9f447dd9ad5536022a977068971b",
+    "Rom.json.gz": "5b02c4f7fa76bbf2957987710eda3051c83becb51641b6bfb5aacc5a6b934659",
+    "1Cor.json.gz": "91b8629dd0ade7d26e5e902ed3679ac7f61b4c9a1b635d30b779476159a824e1",
+    "2Cor.json.gz": "9d3affd004954cb8f5a2dc87f2bb63eea0d8b615694011c5c948ad0919423896",
+    "Gal.json.gz": "e237cc2a03041371661197c41f55346fd71a69ffb72364cce700770044001192",
+    "Eph.json.gz": "35a4b69fad82c160d44dac9d2bd63aec28ab995d3d995c39d3d62ccc396a7c7d",
+    "Phil.json.gz": "284532fde8d7141b00780f3aa77c2570bbf33c7c00454227d4a56e80e532626c",
+    "Col.json.gz": "ecabd5433077be8bb4e18e91ade4546c8cb2b637907ccdebb500971a4ab708b7",
+    "1Thess.json.gz": "ea33ae7a52406f75f879591c8c8bfd4058773c3cc42863fed5210dc351dcc183",
+    "2Thess.json.gz": "d90717affeedfa0d4bd9fe9f926c842ec8cc4c9ef25b9d19d9f752bdd662db9c",
+    "1Tim.json.gz": "21a54f201570071f2606e72f2123a803df2263f7175f8af14a56406fcde6efc7",
+    "2Tim.json.gz": "d6d59b07029ba2c9b74f8347097b2acf6d36006718726d1153e4ff6157de4971",
+    "Titus.json.gz": "eda504063dc09a6ee5139273bb2120b9e1ddb266572d38be883cd4f3619edcc2",
+    "Phlm.json.gz": "d63dd7881180c989763a8ab11eed247fe0bba1722424e5b8ecba5f06549a5c17",
+    "Heb.json.gz": "8033a5e63ed2c098036fc779eb6ff2ddb97c541abfee48877dea3b05930ed00f",
+    "Jas.json.gz": "7845f6c90a446407b0b37ebbbbf01dce24fa2657350687e1564702f7750ebbc2",
+    "1Pet.json.gz": "31fbff97bf6234050a6ec7026a89f1aee19f7afe17097ccf5a1cf028bdff46ec",
+    "2Pet.json.gz": "d2cd1c16bf05cfd2514f031cbe6a0edf35356b7ada1ede48e77ee607637edf80",
+    "1John.json.gz": "98b5e8457aab96f81ffca1ee553ae11156b6a70ae6d24a21fed35ce085137f11",
+    "2John.json.gz": "31751ce303595a3be8187e456d6f390f44ae308d16cca0adb7f7b71106c6c832",
+    "3John.json.gz": "93484ba2e7901cc3589666c4b67d3d3fb8389070a5b9f70ca9629f7572a7ccd5",
+    "Jude.json.gz": "58c9c1b1ed8c0298b8d2566fe9df00f8fe374342c8aba52a740fb48d074050c5",
+    "Rev.json.gz": "3791eafef3cc5ee5f16e5480869a89308cd6168ce9f21c3723f986d30cab7a7f",
+    "metadata.json": "52813b731f91083590215926a5edc03e96998035e5c03ab7cceb5120d71951a5"
+  },
+  "file_source_overrides": {
+    "3John.json.gz": "https://github.com/brainheart/luther-contabulate/blob/63c1d2744d4058df4aa062013ae03933042de35e/docs/commentary/3John.json"
+  },
+  "note": "Union of KJV and Luther NT source records. All 24 other books have identical records; KJV preserves 13 more records across Acts and 2Cor, and Luther preserves one additional Bede record at 3John.1.15."
+}

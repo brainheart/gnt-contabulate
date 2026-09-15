@@ -1,0 +1,130 @@
+{
+  "edition": "SBL Greek New Testament v1.2",
+  "editor": "Michael W. Holmes",
+  "source": "https://github.com/Faithlife/SBLGNT",
+  "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+  "license": "CC BY 4.0",
+  "retrieved": "2026-09-15",
+  "files": {
+    "John.txt": {
+      "upstream_path": "data/sblgnt/text/John.txt",
+      "sha256": "ada9643154a990ae2725ab847c6cfb576ce2c3bcd4945d47606e8a90c8d065f5"
+    },
+    "1Cor.txt": {
+      "upstream_path": "data/sblgnt/text/1Cor.txt",
+      "sha256": "2a706bac29f1e34568bf6862cbc1616471511e9b915d7292adba3e93fb72c946"
+    },
+    "Eph.txt": {
+      "upstream_path": "data/sblgnt/text/Eph.txt",
+      "sha256": "c15837d245dc849384a0be9f6c76de65590ffd496474f48c16822696ca024f6a"
+    },
+    "3John.txt": {
+      "upstream_path": "data/sblgnt/text/3John.txt",
+      "sha256": "db0bfc024dfbafa4bf0c978d6f53186c35e6eb771058672ff4f1c31708db6c16"
+    },
+    "Acts.txt": {
+      "upstream_path": "data/sblgnt/text/Acts.txt",
+      "sha256": "199867a92d9a1ef73abe85986e4489d4799bb187bdd22845f3c168c93cafa9c8"
+    },
+    "1Thess.txt": {
+      "upstream_path": "data/sblgnt/text/1Thess.txt",
+      "sha256": "58b57d9b87ee994757a6bd425cfb8a12cecee9b3c7d0206286fdf2b089b44ccf"
+    },
+    "2Tim.txt": {
+      "upstream_path": "data/sblgnt/text/2Tim.txt",
+      "sha256": "eecea7f17f3493bb3e0d2d5922acf2ab10dae876156e0cbc395355c05f66d2bf"
+    },
+    "Heb.txt": {
+      "upstream_path": "data/sblgnt/text/Heb.txt",
+      "sha256": "a89fa2a3a8f04e8bf6a9c71404a9c45fa0e32cff5b6942043e663d8c1f40cc93"
+    },
+    "Rom.txt": {
+      "upstream_path": "data/sblgnt/text/Rom.txt",
+      "sha256": "a919e44983ec633d541ec1084da79cfba1c1aa7f0eac6470c1ac7ec66cf774e8"
+    },
+    "2Pet.txt": {
+      "upstream_path": "data/sblgnt/text/2Pet.txt",
+      "sha256": "7afd9df2ea451cc6b3d55984d12fcf8d8d159b5f3d40489b4ebd375dbac8aea0"
+    },
+    "Phlm.txt": {
+      "upstream_path": "data/sblgnt/text/Phlm.txt",
+      "sha256": "0b74d129888819be274cdcf239672f4688691ebab77c627521b5fcb185bea011"
+    },
+    "Luke.txt": {
+      "upstream_path": "data/sblgnt/text/Luke.txt",
+      "sha256": "102d65ec7a91271777115d1a605688776adfda6a1188680ccf593e27e3e876d6"
+    },
+    "1Pet.txt": {
+      "upstream_path": "data/sblgnt/text/1Pet.txt",
+      "sha256": "9c847143fbecfb2c5d0fc35820f973efb749c04a9badae99eb8d9ac0cf3d2a6d"
+    },
+    "2John.txt": {
+      "upstream_path": "data/sblgnt/text/2John.txt",
+      "sha256": "b2daf832c6f88d67ae0bdf2ecfbbb42309e330dc161f5b127c8939d5cb448bc7"
+    },
+    "2Thess.txt": {
+      "upstream_path": "data/sblgnt/text/2Thess.txt",
+      "sha256": "c2a6922591a0282f5c07fe9fa47b8f38cd1aaf15b56eb9364aac91f5546f5822"
+    },
+    "Matt.txt": {
+      "upstream_path": "data/sblgnt/text/Matt.txt",
+      "sha256": "4fa718540cbc6330591b233c99c68bbf52b85afc90016e4188efe5cd9719eeb0"
+    },
+    "Gal.txt": {
+      "upstream_path": "data/sblgnt/text/Gal.txt",
+      "sha256": "cea30996850efb7a24d5be03d5d1ea052f2200e292f8bdd190c57298bd8c2fb1"
+    },
+    "Jude.txt": {
+      "upstream_path": "data/sblgnt/text/Jude.txt",
+      "sha256": "9d80e8332848395a7af425ebf30edd21c9c43f0f446489f648b65c652630b734"
+    },
+    "Phil.txt": {
+      "upstream_path": "data/sblgnt/text/Phil.txt",
+      "sha256": "c99e25ea7856fd7a3edb1055716869117c4cba4c15f07567ea22c0269e211b85"
+    },
+    "Mark.txt": {
+      "upstream_path": "data/sblgnt/text/Mark.txt",
+      "sha256": "fe1b5a4c15db71e7e30f33fb67966ca93baffae377085ece0b88f66316729638"
+    },
+    "1Tim.txt": {
+      "upstream_path": "data/sblgnt/text/1Tim.txt",
+      "sha256": "e4813e23b26b8b4763771b252cb41982d3af66abeead62f014e5f5f0a5323dcb"
+    },
+    "Titus.txt": {
+      "upstream_path": "data/sblgnt/text/Titus.txt",
+      "sha256": "8a7ff3511b7cbaaba481fe92b9aa716b8fd2abcc9d54829939c2fa3f836a2267"
+    },
+    "Jas.txt": {
+      "upstream_path": "data/sblgnt/text/Jas.txt",
+      "sha256": "1343ea4125c64585c738a2f8bf54a077947d0a6229b2642b39a1ad845f40e153"
+    },
+    "1John.txt": {
+      "upstream_path": "data/sblgnt/text/1John.txt",
+      "sha256": "074201796600c23d79c0abd26621ed0046290d5f227f4aaea67ac425784094c5"
+    },
+    "2Cor.txt": {
+      "upstream_path": "data/sblgnt/text/2Cor.txt",
+      "sha256": "af6a60d5f851762c7ee22be6f15975e706a55cf24bd0b890d6ee9ab2ad74bd18"
+    },
+    "Rev.txt": {
+      "upstream_path": "data/sblgnt/text/Rev.txt",
+      "sha256": "61419de7970661f8c481975c35b50e7c1df0422db0c6400d1ce2c6ade35da9f0"
+    },
+    "Col.txt": {
+      "upstream_path": "data/sblgnt/text/Col.txt",
+      "sha256": "665ef40dbc19bacf2b2642aa0bfc265e3cfab3f37b5757ea1ff69bdaf968bd08"
+    },
+    "LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    "README.md": {
+      "upstream_path": "README.md",
+      "sha256": "7ae1dc2622a8dafe55cf8b17d4935c3e39a70c46636277dd0fc46fe8b7464721"
+    },
+    "About.md": {
+      "upstream_path": "About.md",
+      "sha256": "4c7198fb57ce5f3b6572e856bd8b9439c9793c9d6b678e0e1ac123c887591765"
+    }
+  }
+}

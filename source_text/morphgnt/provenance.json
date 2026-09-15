@@ -1,0 +1,91 @@
+{
+  "source": "https://github.com/morphgnt/sblgnt",
+  "version": "6.12",
+  "commit": "a2afca0e96e367fb2ca113395bae978115942dfb",
+  "files": {
+    "61-Mt-morphgnt.txt": {
+      "sha256": "34137c91a11547a84e46785d7c82da03dee49087282a7f84cd3cf1e5a67c0a02"
+    },
+    "62-Mk-morphgnt.txt": {
+      "sha256": "29ac9e543accacbd35117bc8946b75e42f11287ad8f595c6afc678c02e2e0c5f"
+    },
+    "63-Lk-morphgnt.txt": {
+      "sha256": "a68bcba78eebb9844f6650a68d6a9357c5554cc132fb42d5ebfde9e669bf4be0"
+    },
+    "64-Jn-morphgnt.txt": {
+      "sha256": "e7d8200408e61860aa20f733611f0215bc51b122774d521f0dea89bd785c52c5"
+    },
+    "65-Ac-morphgnt.txt": {
+      "sha256": "c3ec69d57c5983ecc670b1c42f662acd8c282fb07f61986e2d92d36accc383af"
+    },
+    "66-Ro-morphgnt.txt": {
+      "sha256": "364b3b57c70e731920c7fa8a61f09ecd53eed858f7f3590596066484d0638cc6"
+    },
+    "67-1Co-morphgnt.txt": {
+      "sha256": "fd6f7e5e18aa8aee1c12f028e1fe0f099eed3f51fb1bfd64aaadd6466ecabbdb"
+    },
+    "68-2Co-morphgnt.txt": {
+      "sha256": "1742d5076780a5338a858f2d83e615c87b2412cbefa56a4b8e14aa2c0ce326c4"
+    },
+    "69-Ga-morphgnt.txt": {
+      "sha256": "888b1eff5b3f7f8e02753c548ffb23bc68600d0577f11a57eda399b01eb56ab5"
+    },
+    "70-Eph-morphgnt.txt": {
+      "sha256": "9f6444d3aff9791817c2ad84d8ff5b1c229d18a4e9ab07e5066ceb0068dee397"
+    },
+    "71-Php-morphgnt.txt": {
+      "sha256": "6e6133fba46c164c16264c4d9563b30d5634effba5792419f8ed5d5ec08961a4"
+    },
+    "72-Col-morphgnt.txt": {
+      "sha256": "21e18b4310ce953cd786f8466824f24795cb46ef149dc501a330d55a05f7346a"
+    },
+    "73-1Th-morphgnt.txt": {
+      "sha256": "e322ec075748e81897dc0a2b87a821ee78e200f6ba833bbba07607e55a3c68d5"
+    },
+    "74-2Th-morphgnt.txt": {
+      "sha256": "309ba3338e0ccf2219bea7ee49f1e63bbefc1edcceedc5527c79395fd6b0bc19"
+    },
+    "75-1Ti-morphgnt.txt": {
+      "sha256": "b4a6a446d163b8b651ba11119bbc211b4e14cb12871b48df175adb88d4f9db97"
+    },
+    "76-2Ti-morphgnt.txt": {
+      "sha256": "8af532322a0693ecb8d34b75c544c3b6a57e76e266be750d62d42bc07385376e"
+    },
+    "77-Tit-morphgnt.txt": {
+      "sha256": "16e9204306d616795f53f8627ff6ea05a80f572d7a21ed23ac7df99c6e00324d"
+    },
+    "78-Phm-morphgnt.txt": {
+      "sha256": "e302779406b5405e8ff82a0dc2ded5ab49951f0d6245fe86894100bd83c51e33"
+    },
+    "79-Heb-morphgnt.txt": {
+      "sha256": "32f4d4fd25352713bcaab0e8c2a0ba9d2e04cc57f7bbbfb971689684439f1f1d"
+    },
+    "80-Jas-morphgnt.txt": {
+      "sha256": "205d4cdbb4c89aabd51ebf599fcfa622001af6e64dcd4e5ad487298ee4b7a204"
+    },
+    "81-1Pe-morphgnt.txt": {
+      "sha256": "7eeeecddae91a5d103576f629e4fa536fa2217381f4a83eaa904b63d81ffc0b8"
+    },
+    "82-2Pe-morphgnt.txt": {
+      "sha256": "8bfa3c4818b9b52f8a1c2c80df8a07432b60b9e983cd4d96fb30b3b7efd38b94"
+    },
+    "83-1Jn-morphgnt.txt": {
+      "sha256": "99fb0d33100f9df25697e9b9ecaa04c599a277b5f2f65f8ed28e97902fed4df9"
+    },
+    "84-2Jn-morphgnt.txt": {
+      "sha256": "bb90002d6b9bbbc43977a59c85ad04de873750b5e24187da064a319c2acd7fec"
+    },
+    "85-3Jn-morphgnt.txt": {
+      "sha256": "a75df82d9007bb673e7d27bcb86681e011befc24cbaef1c658965803d7ae490a"
+    },
+    "86-Jud-morphgnt.txt": {
+      "sha256": "93c64857b492812544f1c5903bb63b5ec63ee5f32f69dd4c02d9d9c84b84624d"
+    },
+    "87-Re-morphgnt.txt": {
+      "sha256": "5386b17ab6e3a8a68478cb0f4644009f6ad5322f379327629407ffd46a0e6dd3"
+    },
+    "README.md": {
+      "sha256": "794f8b9123c9f1651f3e682137056d7758b4deeae4478559549381dfa04b4290"
+    }
+  }
+}

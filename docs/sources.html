@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sources · Greek New Testament Contabulate</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>main { max-width: 58rem; margin: auto; } h2 { color: var(--burgundy); margin-top: 2rem; } p, li { line-height: 1.55; } .source-table { overflow-x: auto; } code { overflow-wrap: anywhere; }</style>
+</head>
+<body><main>
+  <p><a href="./">← Greek New Testament explorer</a></p>
+  <h1>Edition and sources</h1>
+  <h2>The Greek text</h2>
+  <p>This explorer follows the <a href="https://github.com/Faithlife/SBLGNT">publisher's SBL Greek New Testament v1.2</a>, edited by Michael W. Holmes. Copyright © 2010 Society of Biblical Literature and Logos Bible Software; licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. SBLGNT is a modern critical edition chosen for its scholarly provenance and clear permission to share the text.</p>
+  <p>Greek spelling, accents, breathings, punctuation, and editorial brackets are preserved. Book headings and apparatus pointer symbols are removed, and spacing and Unicode representation are normalized. The critical apparatus is available from the <a href="https://sblgnt.com/download/">publisher</a>.</p>
+  <p>Counts include the publisher's bracketed text of John 7:53–8:11, the shorter ending appended to Mark 16:8, and Mark 16:9–20. Omitted verses retain their gaps in the numbering, including Romans 16:25–27. No text is supplied from another edition.</p>
+  <p>The source is pinned to commit <code>c4d241a9c1c479a55b989ba35a4976c1d0b8052c</code>. A separate check against <a href="https://github.com/morphgnt/sblgnt/tree/6.12">MorphGNT 6.12</a> agrees on token sequences in 7,910 verses, records differences in 17, and identifies the 12 verses added in John. The publisher's text is authoritative throughout.</p>
+  <h2>Search and counting</h2>
+  <p>Search ignores capitalization and elision marks, while preserving accents and breathings. For example, <a href="./?q=%CE%BB%CF%8C%CE%B3%CE%BF%CF%82&amp;gran=line" lang="grc">λόγος</a> finds that written form; it does not automatically combine all inflections of its lemma. Acute and grave forms are distinct. Phrase counts stop at verse boundaries. Greek question marks count as sentence endings; middle dots do not.</p>
+  <h2>The same historical commentary collection</h2>
+  <p>Commentary comes from the <a href="https://github.com/HistoricalChristianFaith/Commentaries-Database">HistoricalChristianFaith Commentaries Database</a>, using the existing KJV/Luther Contabulate snapshot. Only New Testament coverage is shown. Original author names, dates, works, record IDs, and links are preserved.</p>
+  <p>Comments are mapped by passage overlap, using the following exceptions to direct verse-number matching. A merged verse counts the same excerpt once. A split verse shares passage-level comments; this does not identify which clause a commentator intended or imply that the commentator used SBLGNT.</p>
+  <div class="source-table"><table>
+    <thead><tr><th scope="col">SBLGNT</th><th scope="col">KJV / HCF passage</th></tr></thead>
+    <tbody>
+      <tr><td>Acts 19:40</td><td>Acts 19:40–41</td></tr>
+      <tr><td>2 Corinthians 13:12</td><td>2 Corinthians 13:12–13</td></tr>
+      <tr><td>2 Corinthians 13:13</td><td>2 Corinthians 13:14</td></tr>
+      <tr><td>3 John 1:14</td><td>3 John 1:14</td></tr>
+      <tr><td>3 John 1:15</td><td>3 John 1:14, plus HCF records explicitly numbered 1:15</td></tr>
+      <tr><td>Revelation 12:18 and 13:1</td><td>Revelation 13:1</td></tr>
+    </tbody>
+  </table></div>
+  <p>Passage labels inside commentary details and outbound links use HCF numbering. Sixty source excerpts concern passages absent from this edition and are excluded from counts. Their IDs are retained in the <a href="data/commentary_alignment.json">alignment audit</a>.</p>
+  <p>Table totals count verse–comment overlaps: one excerpt can discuss several verses. The instance's comment total counts individual excerpts. Historical excerpts retain their text; records dated after 1930 display a short identifying preview with links, following the same policy as KJV and Luther. The upstream <a href="https://github.com/HistoricalChristianFaith/Commentaries-Database/blob/master/LICENSE">rights notice</a> distinguishes public-domain material from copyrighted excerpts.</p>
+  <p><a href="./">Return to the explorer →</a></p>
+</main></body>
+</html>
