@@ -10,25 +10,28 @@ async function ready(page, url = '/') {
   await expect(page.locator('#results tbody tr').first()).toBeVisible();
 }
 
-test('sample links restore Greek search and commentary in a fresh page', async ({ page, context }) => {
+test('hell sample opens chapters sorted by hits and survives a shared link', async ({ page, context }) => {
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
-  for (const sample of instance.sample_queries) {
-    const url = new URL(sample.url);
-    await ready(page, url.pathname + url.search);
-    if (url.searchParams.has('cm')) {
-      await expect(page.locator('.commentary-detail-overlay.open')).toBeVisible();
-      await expect(page.locator('.commentary-detail-table tbody tr').first()).toContainText('Augustine');
-    } else {
-      await expect(page.locator('#gran')).toHaveValue('line');
-      await expect(page.locator('#results tbody tr').first()).toContainText('04.John.001.001');
-      await expect(page.locator('#results tbody .hit').first()).toHaveText('λόγος');
-      const copied = await context.newPage();
-      await ready(copied, page.url());
-      await expect(copied.locator('#results tbody tr').first()).toContainText('04.John.001.001');
-      await copied.close();
-    }
-  }
+  expect(instance.sample_queries).toHaveLength(1);
+  const sample = instance.sample_queries[0];
+  expect(sample.label).toBe('Go to /γέενν|γεένν|ᾅδ|ταρταρ/');
+  const url = new URL(sample.url);
+  await ready(page, url.pathname + url.search);
+  await expect(page.locator('#gran')).toHaveValue('act');
+  await expect(page.locator('#matchMode')).toHaveValue('regex');
+  await expect(page.locator('th[data-key="t0_count"]')).toHaveClass(/sorted-desc/);
+  await expect(page.locator('#results tbody tr')).toHaveCount(16);
+  const counts = await page.locator('td[data-key="t0_count"]').allTextContents();
+  const hits = counts.map(Number);
+  expect(hits.reduce((sum, n) => sum + n, 0)).toBe(23);
+  expect(hits).toEqual([...hits].sort((a, b) => b - a));
+  await expect(page.locator('#results tbody')).toContainText('2 Peter');
+  const copied = await context.newPage();
+  await ready(copied, page.url());
+  await expect(copied.locator('#gran')).toHaveValue('act');
+  expect(await copied.locator('td[data-key="t0_count"]').allTextContents()).toEqual(counts);
+  await copied.close();
   expect(errors).toEqual([]);
 });
 

@@ -11,12 +11,8 @@
   "segment_label": "verses",
   "sample_queries": [
     {
-      "label": "The Word in John",
-      "url": "https://gnt.contabulate.org/?q=%CE%BB%CF%8C%CE%B3%CE%BF%CF%82&gran=line&s_ft_location=%5E04%5C.John%5C.&sk=location&sd=asc"
-    },
-    {
-      "label": "Augustine on John 1:1",
-      "url": "https://gnt.contabulate.org/?cm=John.1.1~augustine"
+      "label": "Go to /γέενν|γεένν|ᾅδ|ταρταρ/",
+      "url": "https://gnt.contabulate.org/?q=%CE%B3%CE%AD%CE%B5%CE%BD%CE%BD%7C%CE%B3%CE%B5%CE%AD%CE%BD%CE%BD%7C%E1%BE%85%CE%B4%7C%CF%84%CE%B1%CF%81%CF%84%CE%B1%CF%81&mm=regex&nm=1&gran=act&sk=t0_count&sd=desc&zr=0"
     }
   ]
 }
