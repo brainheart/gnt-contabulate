@@ -7,6 +7,7 @@ from pathlib import Path
 import hashlib
 import unicodedata
 from scripts.map_commentary import map_commentary
+from scripts.glossary import LEXICON_COMMIT, build_glossary
 
 TOKEN_RE = re.compile(r"[^\W\d_]+(?:[\u0300-\u036f]+[^\W\d_]*)*", re.UNICODE)
 SENT_RE = re.compile(r"[.!?;;]+")
@@ -387,8 +388,18 @@ def build(source_path: Path, out_dir: Path):
     (lines_dir / "all_lines.json").write_text(
         json.dumps(all_lines, ensure_ascii=False), encoding="utf-8"
     )
+    # English glosses and dictionary forms for every word form (reading aids).
+    glossary, glossary_stats = build_glossary(
+        all_lines, source_path / "morphgnt", source_path / "lexicon" / "lexemes.yaml", BOOK_ORDER, tokenize)
+    (data_dir / "glossary.json").write_text(json.dumps({
+        "source": "MorphGNT SBLGNT 6.12 lemmas (CC BY-SA 3.0) and the MorphGNT morphological lexicon's "
+                  f"Dodson glosses (morphgnt/morphological-lexicon@{LEXICON_COMMIT[:7]}, CC BY-SA 3.0)",
+        "meta": {"lang": "grc", "dir": "ltr"},
+        **glossary,
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     return {
+        "glossary": dict(glossary_stats),
         "book_count": len(plays),
         "verse_count": len(chunks),
         "line_count": len(all_lines),
@@ -405,5 +416,6 @@ if __name__ == "__main__":
         "Done: "
         f"{result['book_count']} books, "
         f"{result['verse_count']} verses, "
-        f"{result['line_count']} verse rows written to {out_dir}"
+        f"{result['line_count']} verse rows written to {out_dir}; glossary: "
+        f"{result['glossary']['lemmas']} lemmas for {result['glossary']['forms']} forms"
     )

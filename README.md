@@ -65,6 +65,7 @@ See [commentary/README.md](commentary/README.md) for snapshot provenance and rig
 
 - `build.py`: authoritative corpus/index/metrics/metadata builder.
 - `scripts/map_commentary.py`: checked, deduplicated commentary crosswalk.
+- `scripts/glossary.py`, `docs/js/glossary.js`, `docs/data/glossary.json`: the English lookup box and the gloss and dictionary-form columns. Lemmas are MorphGNT's; glosses are Dodson's, from `source_text/lexicon/lexemes.yaml` (MorphGNT morphological lexicon, CC BY-SA 3.0, pinned by SHA-256). Display-only: nothing in it is searched or counted, and the page works without it. `glossary.js` is shared verbatim with the other non-English instances.
 - `source_text/`: pinned publisher files, notices, independent MorphGNT snapshot, and comparison.
 - `commentary/snapshot/`: compressed NT source records; `provenance.json` pins their origin and hashes.
 - `docs/data`, `docs/lines`, `docs/commentary`, `docs/instance.json`: generated, committed static output.

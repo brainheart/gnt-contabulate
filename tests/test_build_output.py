@@ -10,6 +10,7 @@ import unittest
 
 import build
 from scripts.verify_sources import compare
+from scripts import glossary
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -182,6 +183,66 @@ class CommentaryTests(unittest.TestCase):
             omitted = set(audit['unmapped_comment_ids_by_book'][book])
             self.assertFalse(retained & omitted)
             self.assertEqual(retained | omitted, {r[2] for r in original['comments']})
+
+
+class GlossaryTests(unittest.TestCase):
+    """The English reading aids: lemmas from MorphGNT, glosses from Dodson."""
+    @classmethod
+    def setUpClass(cls):
+        cls.glossary = read('docs/data/glossary.json')
+        cls.tokens = read('docs/data/tokens.json')
+        cls.lines = read('docs/lines/all_lines.json')
+        cls.lemmas = cls.glossary['lemmas']
+        cls.forms = cls.glossary['forms']
+        cls.by_lemma = {e['lemma']: e for e in cls.lemmas}
+
+    def test_lexicon_is_pinned_and_attributed(self):
+        lexemes = glossary.parse_lexemes(ROOT / 'source_text/lexicon/lexemes.yaml')
+        self.assertEqual(len(lexemes), 5466)
+        self.assertEqual(lexemes['λόγος']['gloss'], 'a word, speech, divine utterance, analogy')
+        self.assertIn('MorphGNT', self.glossary['source'])
+        self.assertIn('Dodson', self.glossary['source'])
+        self.assertEqual(self.glossary['meta'], {'lang': 'grc', 'dir': 'ltr'})
+
+    def test_words_take_lemmas_from_morphgnt(self):
+        morphgnt = glossary.load_morphgnt(ROOT / 'source_text/morphgnt', build.BOOK_ORDER, build.tokenize)
+        notes, stats = glossary.annotate(self.lines, morphgnt, build.tokenize)
+        self.assertEqual(stats['verses_identical'], 7910)
+        self.assertEqual(stats['verses_matched_word_by_word'], 17)
+        self.assertEqual(stats['verses_without_morphology'], 12)
+        self.assertEqual(stats['words'], sum(sum(c for _, c in p) for p in self.tokens.values()))
+        self.assertLessEqual(stats['words_without_lemma'], 20)
+        self.assertEqual([n[0] for n in notes['John.1.1']][:5], ['ἐν', 'ἀρχή', 'εἰμί', 'ὁ', 'λόγος'])
+        for row in self.lines:
+            self.assertEqual(len(notes[row['canonical_id']]), len(build.tokenize(row['text'])))
+
+    def test_forms_cover_the_vocabulary_exactly(self):
+        self.assertEqual(set(self.forms), set(self.tokens))
+        for form, (count, glosses, related) in self.forms.items():
+            self.assertEqual(count, sum(c for _, c in self.tokens[form]), form)
+            self.assertTrue(all(0 <= i < len(self.lemmas) for i in related))
+            self.assertLessEqual(len(glosses), 2)
+        self.assertEqual(self.forms['λόγον'][1], ['a word, speech, divine utterance, analogy'])
+        self.assertEqual(self.lemmas[self.forms['ἀρχῇ'][2][0]]['lemma'], 'ἀρχή')
+        without = [f for f, (_, glosses, _) in self.forms.items() if not glosses]
+        self.assertLess(len(without), 30)
+
+    def test_lemmas_glosses_and_search_words(self):
+        self.assertEqual(len(self.lemmas), 5459)
+        self.assertEqual([e['n'] for e in self.lemmas], sorted((e['n'] for e in self.lemmas), reverse=True))
+        for entry in self.lemmas:
+            self.assertEqual(entry['n'], sum(count for _, count in entry['forms']))
+            for form, count in entry['forms']:
+                self.assertLessEqual(count, self.forms[form][0])
+        self.assertLessEqual(sum(1 for e in self.lemmas if not e['def']), 2)
+        logos = self.by_lemma['λόγος']
+        self.assertEqual((logos['n'], logos['pos'], logos['w'][0]), (330, 'noun', ['word', 330]))
+        self.assertEqual(dict(self.by_lemma['ἀγάπη']['forms']),
+                         {'ἀγάπη': 36, 'ἀγάπην': 33, 'ἀγάπῃ': 28, 'ἀγάπης': 18, 'ἀγάπαις': 1})
+        self.assertEqual(self.by_lemma['ἀγαπάω']['def'], 'I love')
+        self.assertEqual(self.by_lemma['ὁ']['pos'], 'article')
+        self.assertEqual(glossary.gloss_words('I love, wish well to'), ['love', 'wish', 'well'])
+        self.assertEqual(glossary.word_index('a word, speech', 10), [['word', 10], ['speech', 5]])
 
 
 if __name__ == '__main__':
