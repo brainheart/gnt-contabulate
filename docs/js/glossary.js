@@ -45,12 +45,13 @@
     const words = String(ngram || '').split(' ').filter(Boolean);
     if (words.length === 1) {
       const entry = formEntry(words[0]);
-      return entry ? entry[1].join('; ') : '';
+      // Glosses that are themselves lists are set apart more firmly.
+      return entry ? entry[1].join(entry[1].some(g => g.includes(';')) ? ' | ' : '; ') : '';
     }
     return words.map(w => { const e = formEntry(w); return e && e[1].length ? e[1][0] : '…'; }).join(' · ');
   }
 
-  function listSeparator() { return meta.dir === 'rtl' ? '، ' : ', '; }
+  function listSeparator() { return /^ar\b/.test(meta.lang) ? '، ' : ', '; }
 
   function formLemmas(form) {
     const entry = formEntry(form);
@@ -121,12 +122,13 @@
     let partial = 0;
     for (const [w, count] of entry.w) {
       if (w === word) exact += count;
-      else if (word.length >= 3 && w.startsWith(word)) partial += count;
+      // Short queries match whole words only: "sea" should not find "seated".
+      else if (word.length >= 4 && w.startsWith(word)) partial += count;
     }
     if (!exact && !partial && entry.def) {
       const inDefinition = englishWords(entry.def);
       if (inDefinition.includes(word)) exact = Math.max(1, Math.round(entry.n / 2));
-      else if (word.length >= 3 && inDefinition.some(w => w.startsWith(word))) partial = Math.max(1, Math.round(entry.n / 2));
+      else if (word.length >= 4 && inDefinition.some(w => w.startsWith(word))) partial = Math.max(1, Math.round(entry.n / 2));
     }
     return exact + partial / 2;
   }
